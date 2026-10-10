@@ -1,0 +1,23 @@
+{
+  "name": "test-log-buddy",
+  "version": "0.4.0",
+  "description": "Independent local product log viewing and redacted copy",
+  "license": "MIT",
+  "type": "commonjs",
+  "bin": {
+    "test-log-buddy": "bin/test-log-buddy.cjs"
+  },
+  "scripts": {
+    "start": "node bin/test-log-buddy.cjs",
+    "demo": "node bin/test-log-buddy.cjs demo",
+    "test": "node --test test/*.test.cjs",
+    "build": "node scripts/build.cjs"
+  },
+  "engines": {
+    "node": ">=22.13"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0",
+    "postject": "^1.0.0-alpha.6"
+  }
+}

@@ -1,0 +1,14 @@
+name: Share feedback
+description: Help improve the real testing flow.
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What part of testing or copying was difficult?
+      description: Tell us the task and the step where you got stuck; keep private logs out.
+    validations:
+      required: true
+  - type: input
+    id: setup
+    attributes:
+      label: OS and coding agent

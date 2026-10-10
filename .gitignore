@@ -1,0 +1,13 @@
+node_modules/
+dist/
+work/
+.env
+.env.*
+!.env.example
+*.log
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+*.session.json
+*.meta.json
+.DS_Store

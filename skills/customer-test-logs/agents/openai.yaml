@@ -1,0 +1,4 @@
+interface:
+  display_name: "客户测试日志"
+  short_description: "AI 启动产品时自动准备独立日志窗口，客户照常测试，出错时脱敏复制"
+  default_prompt: "Use $customer-test-logs before handing over this product's preview link: capture its normal launch output and open the independent log window."

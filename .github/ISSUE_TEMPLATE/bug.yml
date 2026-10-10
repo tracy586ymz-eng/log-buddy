@@ -1,0 +1,33 @@
+name: Report a bug
+description: Something broke while using Log Buddy.
+title: "[Bug] "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: "Please use fictional data or redacted snippets only. Do not upload raw logs, credentials or private screenshots."
+  - type: input
+    id: environment
+    attributes:
+      label: OS / architecture / Log Buddy version
+      placeholder: macOS, Apple Silicon, 0.4.0
+    validations:
+      required: true
+  - type: input
+    id: harness
+    attributes:
+      label: Coding agent / harness and version
+      placeholder: Codex or DeepSeek Harness
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps and expected result
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: What happened instead?
+      description: Include a redacted excerpt only if it helps.
+    validations:
+      required: true
