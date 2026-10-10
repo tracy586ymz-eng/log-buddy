@@ -44,7 +44,7 @@ function demoProduct(port) {
 async function main(argv=process.argv.slice(2)) {
   const {mode,flags,command}=parse([...argv]);
   if(mode==='help') {
-    console.log('Log Buddy 0.4.0\nview：独立日志窗口\ncollect --cwd <project> --name <product> -- <original-program> <args>：采集并自动打开窗口\nwatch --file <existing-log>：只读跟随已有日志并自动打开窗口\nintegrate：个人安装一次共享采集 Skill\n--no-open：仅采集，不打开窗口\ndemo：仅展示演示日志，不启动产品');return;
+    console.log('Log Buddy 0.4.1\nview：独立日志窗口\ncollect --cwd <project> --name <product> -- <original-program> <args>：采集并自动打开窗口\nwatch --file <existing-log>：只读跟随已有日志并自动打开窗口\nintegrate：个人安装一次共享采集 Skill\n--no-open：仅采集，不打开窗口\ndemo：仅展示演示日志，不启动产品');return;
   }
   if(mode==='demo-product'){demoProduct(Number(flags.port));return;}
   if(mode==='sources'){console.log(JSON.stringify(listSources(flags.store),null,2));return;}

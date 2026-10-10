@@ -1,6 +1,6 @@
 {
   "name": "test-log-buddy",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Independent local product log viewing and redacted copy",
   "license": "MIT",
   "type": "commonjs",

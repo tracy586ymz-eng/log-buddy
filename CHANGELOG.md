@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.4.1 — Mac compatibility fix
+
+- Explicitly compile the native shell for macOS13.5 instead of inheriting the build machine's macOS26 target.
+- Match the app's declared minimum to the embedded Node runtime (macOS13.5).
+- Add a native compilation/deployment-target check to public CI.
+
+Version0.4.0's earlier macOS13 claim was incorrect: its native shell required macOS26. Use0.4.1 for the corrected deployment target. Builds remain ad-hoc signed and not Apple-notarized; older OS runtime acceptance is still broader testing work.
+
 ## 0.4.0 — Public preview
 
 - Full private local history, independent of the bounded rendering page.

@@ -2,9 +2,9 @@
 
 <p align="center"><b>Live product logs for people building with AI — select the problem, copy a redacted snippet, ask your agent to fix it.</b></p>
 
-<p align="center"><a href="https://github.com/tracy586ymz-eng/log-buddy/releases/download/v0.4.0/Log-Buddy-mac-arm64-v0.4.0.zip"><b>Download Mac App</b></a> · <a href="https://github.com/tracy586ymz-eng/log-buddy/releases/tag/v0.4.0">Public preview &amp; release notes</a> · <a href="docs/README.zh-CN.md">中文说明</a> · <a href="https://github.com/tracy586ymz-eng/log-buddy/issues/new/choose">Report feedback</a></p>
+<p align="center"><a href="https://github.com/tracy586ymz-eng/log-buddy/releases/download/v0.4.1/Log-Buddy-mac-arm64-v0.4.1.zip"><b>Download Mac App</b></a> · <a href="https://github.com/tracy586ymz-eng/log-buddy/releases/tag/v0.4.1">Public preview &amp; release notes</a> · <a href="docs/README.zh-CN.md">中文说明</a> · <a href="https://github.com/tracy586ymz-eng/log-buddy/issues/new/choose">Report feedback</a></p>
 
-<p align="center"><a href="LICENSE"><img alt="MIT license" src="https://img.shields.io/badge/license-MIT-28674f"></a> <img alt="Apple Silicon macOS" src="https://img.shields.io/badge/macOS-Apple%20Silicon-28674f"> <img alt="Public preview" src="https://img.shields.io/badge/version-0.4.0%20preview-efb75b"></p>
+<p align="center"><a href="LICENSE"><img alt="MIT license" src="https://img.shields.io/badge/license-MIT-28674f"></a> <img alt="Apple Silicon macOS" src="https://img.shields.io/badge/macOS-Apple%20Silicon-28674f"> <img alt="Public preview" src="https://img.shields.io/badge/version-0.4.1%20preview-efb75b"></p>
 
 ## Your agent built the app. You found the bug. Now what?
 
@@ -26,9 +26,9 @@ You click the product link, test it in your normal browser or window, and someth
 
 ## Download & get started
 
-**Apple Silicon Mac · macOS 13+ · public preview**
+**Apple Silicon Mac · macOS 13.5+ · public preview**
 
-1. [Download Log Buddy](https://github.com/tracy586ymz-eng/log-buddy/releases/download/v0.4.0/Log-Buddy-mac-arm64-v0.4.0.zip), unzip once, and move **Log Buddy.app** to Applications.
+1. [Download Log Buddy](https://github.com/tracy586ymz-eng/log-buddy/releases/download/v0.4.1/Log-Buddy-mac-arm64-v0.4.1.zip), unzip once, and move **Log Buddy.app** to Applications.
 2. Open it and click **开启日志助手** once. The app installs its managed `customer-test-logs` Skill.
 3. Start a new Codex / DeepSeek Harness conversation so it can discover the Skill. Ask your agent to start the product with test logs prepared, then test in the original product window.
 4. When a bug appears, select the useful log lines and copy them. Paste the redacted result back to your agent.

@@ -2,7 +2,7 @@
 
 **AI写好了产品，你在测试中发现Bug：选中对应日志，安全复制给AI。**
 
-[下载Mac App](https://github.com/tracy586ymz-eng/log-buddy/releases/download/v0.4.0/Log-Buddy-mac-arm64-v0.4.0.zip) · [版本说明](https://github.com/tracy586ymz-eng/log-buddy/releases/tag/v0.4.0) · [English](../README.md) · [反馈问题](https://github.com/tracy586ymz-eng/log-buddy/issues/new/choose)
+[下载Mac App](https://github.com/tracy586ymz-eng/log-buddy/releases/download/v0.4.1/Log-Buddy-mac-arm64-v0.4.1.zip) · [版本说明](https://github.com/tracy586ymz-eng/log-buddy/releases/tag/v0.4.1) · [English](../README.md) · [反馈问题](https://github.com/tracy586ymz-eng/log-buddy/issues/new/choose)
 
 ![实际App，全部演示数据为虚构](assets/app-screenshot.png)
 
@@ -20,7 +20,7 @@
 
 ## 首版范围
 
-- 已验证Apple Silicon Mac、macOS 13+；当前App界面中文，英文文档已提供。
+- 已验证Apple Silicon Mac、macOS 13.5+；当前App界面中文，英文文档已提供。
 - App自带运行环境，无需另外安装Node或Swift；原产品仍需它自己的依赖。
 - 首版是公开预览，ad-hoc签名、尚未Apple公证。其他Mac可能阻止正常打开；保留正常系统保护。Windows / Intel Mac安装包尚未提供。
 - Skill是AI操作指引，两个harness的新会话稳定自动采用仍需更多真实验收；不能承诺任意点一个链接就接入所有程序。

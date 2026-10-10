@@ -19,3 +19,16 @@ jobs:
           package-manager-cache: false
       - run: npm ci
       - run: npm test
+
+  native-shell:
+    runs-on: macos-14
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+      - run: mkdir -p work
+      - name: Compile native shell for macOS13.5
+        run: swiftc -O -target arm64-apple-macos13.5 -framework AppKit -framework WebKit native/LogBuddy.swift -o work/LogBuddy
+      - name: Check deployment target
+        run: python3 -c "import subprocess; assert 'minos 13.5' in subprocess.check_output(['xcrun','vtool','-show-build','work/LogBuddy'],text=True)"
