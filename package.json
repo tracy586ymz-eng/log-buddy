@@ -1,6 +1,6 @@
 {
   "name": "test-log-buddy",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "Independent local product log viewing and redacted copy",
   "license": "MIT",
   "type": "commonjs",
@@ -11,7 +11,8 @@
     "start": "node bin/test-log-buddy.cjs",
     "demo": "node bin/test-log-buddy.cjs demo",
     "test": "node --test test/*.test.cjs",
-    "build": "node scripts/build.cjs"
+    "build": "node scripts/build.cjs",
+    "privacy": "python3 scripts/check-publication.py"
   },
   "engines": {
     "node": ">=22.13"

@@ -2,9 +2,9 @@ const {test}=require('node:test'),assert=require('node:assert/strict'),{PassThro
 const {createRedactor}=require('../lib/redact.cjs'),{capture}=require('../lib/capture.cjs'),{Session}=require('../lib/session.cjs');
 test('redaction hides secrets, quoted whitespace, identities and URL credentials; idempotent',()=>{
   const r=createRedactor(['业务订单-123']);
-  const raw='{"password":"hello \\"escaped\\" world","api_key":"abcdef-secret"}\napi_key=abcdef-secret\nuser=person@example.invalid 192.0.2.45 /Users/privateuser/app C:\\Users\\privateuser\\app https://alice:pass@localhost/x?token=abcdef-secret 业务订单-123\nAuthorization: Bearer abcdef-secret\nCookie: session=top-secret; user=alice';
+  const raw='{"password":"FAKE hello \\"escaped\\" world","api_key":"FAKE_abcdef-secret"}\napi_key=FAKE_abcdef-secret\nuser=person@example.invalid 192.0.2.45 /Users/privateuser/app C:\\Users\\privateuser\\app https://alice:pass@localhost/x?token=FAKE_abcdef-secret 业务订单-123\nAuthorization: Bearer FAKE_abcdef-secret\nCookie: session=top-secret; user=alice';
   const text=r.redact(raw);
-  for(const value of ['abcdef-secret','hello','privateuser','person@example','192.0.2.45','alice:pass','top-secret','业务订单-123'])assert.ok(!text.includes(value),value);
+  for(const value of ['FAKE_abcdef-secret','hello','privateuser','person@example','192.0.2.45','alice:pass','top-secret','业务订单-123'])assert.ok(!text.includes(value),value);
   assert.equal(r.redact(text),text);
   assert.match(text,/"api_key":"\[SECRET_\d+\]"/);
   const quoted=text.match(/"api_key":"(\[SECRET_\d+\])"/)[1];

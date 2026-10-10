@@ -19,6 +19,10 @@ jobs:
           package-manager-cache: false
       - run: npm ci
       - run: npm test
+      - name: Check public source privacy
+        run: python3 scripts/check-publication.py
+      - name: Verify publication guard rejects private fixtures
+        run: python3 scripts/test-publication.py
 
   native-shell:
     runs-on: macos-14

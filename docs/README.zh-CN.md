@@ -2,7 +2,7 @@
 
 **AI写好了产品，你在测试中发现Bug：选中对应日志，安全复制给AI。**
 
-[下载Mac App](https://github.com/tracy586ymz-eng/log-buddy/releases/download/v0.4.1/Log-Buddy-mac-arm64-v0.4.1.zip) · [版本说明](https://github.com/tracy586ymz-eng/log-buddy/releases/tag/v0.4.1) · [English](../README.md) · [反馈问题](https://github.com/tracy586ymz-eng/log-buddy/issues/new/choose)
+[下载Mac App](https://github.com/tracy586ymz-eng/log-buddy/releases/download/v0.4.2/Log-Buddy-mac-arm64-v0.4.2.zip) · [版本说明](https://github.com/tracy586ymz-eng/log-buddy/releases/tag/v0.4.2) · [English](../README.md) · [反馈问题](https://github.com/tracy586ymz-eng/log-buddy/issues/new/choose)
 
 ![实际App，全部演示数据为虚构](assets/app-screenshot.png)
 
@@ -17,6 +17,10 @@
 查看的是原文，脱敏的是复制结果。错误和堆栈保留，原始记录不改；选中文字时画面暂停，后台继续记录。
 
 完整历史留本机，没有一分钟或总条数淘汰；可搜索全部历史、载入早期日志、按时间定位，实际总量受磁盘容量限制。「最近1分钟」只是可选的复制范围。
+
+## 自己接入模型
+
+Log Buddy 不需要 LLM 密钥。客户在自己的 Codex 登录账号，或在 DeepSeek Harness 的 Settings → Models 配置自己的 API Key；费用归自己的模型账号。作者的账号、密码、密钥和调用配置不随 App 提供。[查看完整接入步骤与常见问题](llm-setup.zh-CN.md)。
 
 ## 首版范围
 

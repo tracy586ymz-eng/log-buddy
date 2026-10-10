@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.4.2
+
+- Remove the local absolute build path embedded in the single-executable helper by preparing its bundle with relative paths.
+- Add publication checks for personal configuration, runtime records, credential patterns and local build paths.
+- Explain customer-owned Codex / DeepSeek Harness model setup in English and Chinese; no LLM key is needed by Log Buddy.
+
+
 ## 0.4.1 — Mac compatibility fix
 
 - Explicitly compile the native shell for macOS13.5 instead of inheriting the build machine's macOS26 target.

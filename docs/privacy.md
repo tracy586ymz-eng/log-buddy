@@ -13,3 +13,13 @@ Metadata includes product name, status, collector PID and loopback port numbers.
 The main flow does not require Safari Automation permission. The optional foreground Safari adapter is disabled. Its dormant code matches a transient loopback port; it does not save browsing history. Do not enable extra permissions for the basic workflow.
 
 Never paste live credentials or personal runtime logs into an issue. Use fictional reproduction values and a redacted excerpt. If a secret was exposed outside your machine, use its provider's normal process to replace it.
+
+## Model accounts and public packages
+
+Log Buddy has no LLM key configuration and does not read Codex or Harness authentication stores. Customers configure their own agent accounts and provider billing. See the [model setup guide](llm-setup.md). Environment inheritance lets the original product keep its normal configuration; it is not serialized or included in this app. A product may still print secrets in its output, so original local history must remain private.
+
+Public packages contain program code, UI, a portable Skill template, runtime and licenses. They must not contain local records, personal agent configuration, authentication files, development environment files or a rendered personal Skill. Demo data and screenshots use fictional values. GitHub owner identity and no-reply commit identity are intentionally public; dependency-license attribution is retained.
+
+[Publication checks and limits](publication.md).
+
+[Scoped 0.4.2 privacy review](privacy-review.md).

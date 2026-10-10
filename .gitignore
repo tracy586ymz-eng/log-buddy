@@ -11,3 +11,14 @@ work/
 *.session.json
 *.meta.json
 .DS_Store
+
+# Personal agent/model configuration is never a release input.
+.codex/
+.dsh/
+.agents/
+auth.json
+.credentials.yaml
+.credentials.yml
+settings.yaml
+cordis.patch.yml
+__pycache__/

@@ -2,8 +2,8 @@ const fs=require('node:fs'),path=require('node:path'),{spawnSync}=require('node:
 const {buildSync}=require('esbuild'),{inject}=require('postject');
 const root=path.resolve(__dirname,'..'),out=path.join(root,'dist',process.platform+'-'+process.arch);
 const version=JSON.parse(fs.readFileSync(path.join(root,'package.json'),'utf8')).version;
-function run(program,args) {
-  const result=spawnSync(program,args,{stdio:'inherit',cwd:root});
+function run(program,args,cwd=root) {
+  const result=spawnSync(program,args,{stdio:'inherit',cwd});
   if(result.error||result.status!==0)throw new Error('构建步骤失败：'+program);
 }
 async function main() {
@@ -11,10 +11,10 @@ async function main() {
   const bundled=path.join(out,'main.cjs');
   buildSync({entryPoints:[path.join(root,'bin/test-log-buddy.cjs')],bundle:true,platform:'node',target:'node22',format:'cjs',outfile:bundled,banner:{js:"// Test Log Buddy — MIT license"}});
   const assets={};
-  for(const name of ['web/index.html','web/style.css','web/app.js','lib/redactor-core.cjs','skills/customer-test-logs/SKILL.md','skills/customer-test-logs/agents/openai.yaml'])assets[name]=path.join(root,name);
+  for(const name of ['web/index.html','web/style.css','web/app.js','lib/redactor-core.cjs','skills/customer-test-logs/SKILL.md','skills/customer-test-logs/agents/openai.yaml'])assets[name]=path.relative(out,path.join(root,name));
   const blob=path.join(out,'sea-prep.blob'), config=path.join(out,'sea-config.json');
-  fs.writeFileSync(config,JSON.stringify({main:bundled,output:blob,disableExperimentalSEAWarning:true,useCodeCache:false,useSnapshot:false,assets}));
-  run(process.execPath,['--experimental-sea-config',config]);
+  fs.writeFileSync(config,JSON.stringify({main:path.basename(bundled),output:path.basename(blob),disableExperimentalSEAWarning:true,useCodeCache:false,useSnapshot:false,assets}));
+  run(process.execPath,['--experimental-sea-config',path.basename(config)],out);
   const executable=path.join(out,process.platform==='win32'?'test-log-buddy.exe':'test-log-buddy');
   fs.copyFileSync(process.execPath,executable);fs.chmodSync(executable,0o755);
   if(process.platform==='darwin') {
